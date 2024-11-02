@@ -1,0 +1,25 @@
+
+
+using System.Reflection;
+
+namespace MarioETare
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Introdu numere separate prin spatii:\t");
+            string numere = Console.ReadLine();
+            int numaratorPar = 0;
+            Console.Write("Numere pare:\t");
+            string[] tablou = numere.Split(' ');
+            foreach (string stringNumar in tablou){
+            if(int.TryParse(stringNumar,out int numar)){
+                    if (numar % 2 == 0) { Console.Write($"{numar} ");numaratorPar += 1; }
+                }
+            }
+
+           
+        }
+    }
+}
