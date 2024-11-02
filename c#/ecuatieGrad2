@@ -1,0 +1,27 @@
+
+namespace MarioETare
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Ecuatie de gradul 2: a*x*x+b*x+c=0");
+            int a, b, c;
+            Console.Write("a=\t");
+            a = Convert.ToInt32(Console.ReadLine());
+            if (a == 0) { Console.Write("!!! a nu poate fi 0 !!!");return; }
+            Console.Write("b=\t");
+            b = Convert.ToInt32(Console.ReadLine());
+            Console.Write("c=");
+            c=Convert.ToInt32(Console.ReadLine());
+            double delta = b * b - 4 * a * c;
+            delta = Math.Sqrt(delta);
+            double x1, x2;
+            if (delta < 0) { Console.WriteLine($"Ecuatia de gradul 2 {a}*x*x+{b}*x+{c} nu are solutii reale.");return;}
+            x1 = -b + delta;x1 /= 2;x1 /= a;
+            x2 = -b - delta;x2 /= 2;x2 /= a;
+            if (delta == 0) { Console.WriteLine($"Ecuatia de gradul 2 {a}*x*x+{b}*{c}=0 are solutia unica x={x1}");return;}
+            Console.WriteLine($"Ecuatia de gradul 2 {a}*x*x+{b}*x+{c}=0 are solutiile x1={x1} si x2={x2}");return;
+        }
+    }
+}
