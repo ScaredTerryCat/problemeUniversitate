@@ -1,0 +1,23 @@
+
+namespace MarioETare
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Introdu sir de caractere:\t");
+            String sirDeCaractere=Console.ReadLine();
+            string sirInversat = String.Empty;
+            Stack<char> caractere = new Stack<char>();
+            foreach (char elem in sirDeCaractere) { caractere.Push(elem);}
+            foreach (char elem in caractere) {
+                sirInversat += elem;
+            }
+            if (sirInversat == sirDeCaractere) { Console.WriteLine("Este palindrom"); }
+            else {Console.WriteLine("Nu este palindrom");}
+
+
+
+        }
+    }
+}
