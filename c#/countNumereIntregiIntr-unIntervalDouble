@@ -1,0 +1,40 @@
+
+someone someoneAdam <marioetare1120@gmail.com>
+Fri, Nov 15, 3:33 AM (6 days ago)
+to me
+
+namespace ConsoleApp29
+{
+    internal class Program
+    {
+
+        static void Main(string[] args)
+        {
+            double a, b;
+            try
+            {
+                Console.Write("a=\t");
+                a = Convert.ToDouble(Console.ReadLine());
+                Console.Write("b=\t");
+                b = Convert.ToDouble(Console.ReadLine());
+               
+                int startInterval = Convert.ToInt32(Math.Ceiling(a));
+                int endInterval = Convert.ToInt32(Math.Floor(b));
+                int countNumereIntregi = 0;
+                for (int i = startInterval; i <= endInterval; i++)
+                {
+                    countNumereIntregi++;
+                }
+
+                Console.WriteLine($"Numere intregi intre {a} si {b}:\t{countNumereIntregi}");
+
+           
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Introdu doar valori numerice!");
+            }
+           
+    }
+    }
+}
