@@ -1,0 +1,33 @@
+
+someone someoneAdam <marioetare1120@gmail.com>
+Fri, Nov 15, 3:04 AM (6 days ago)
+to me
+
+namespace ConsoleApp29
+{
+    internal class Program
+    {
+        static bool monotonieCrescatoare(string secventa) {
+            int lastValue = int.MinValue;
+            foreach (var elem in secventa.Split(' ', StringSplitOptions.RemoveEmptyEntries)) {
+                try
+                {
+                    int intElem = Convert.ToInt32(elem);
+                    if (intElem < lastValue) { return false; }
+                    lastValue = intElem;
+                }
+                catch (Exception e) {
+                    Console.WriteLine($"{elem} nu este un numar");
+                }
+            }
+            return true;
+        }
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Introdu o secventa de numere: ");
+            string s = Console.ReadLine();
+            bool crescatoare = monotonieCrescatoare(s);
+            if (crescatoare) { Console.WriteLine("Secventa este crescatoare."); } else { Console.WriteLine("Secventa nu este crescatoare."); }
+        }
+    }
+}
