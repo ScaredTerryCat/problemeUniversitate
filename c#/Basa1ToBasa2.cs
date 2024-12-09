@@ -246,6 +246,7 @@ return result;
     b1=Convert.ToInt32(sb1);b2=Convert.ToInt32(sb2);
     
     sa2=numBase1numBase2(sa1,b1,b2);
+    if(sa2=="demonic"){Console.WriteLine("\n!!Error!! Most likely base is not in range 2-16");return;}
     Console.WriteLine($"num2[ result ] =\t{sa2}");
     }
     catch(Exception  e){Console.WriteLine("Something went wrong... be careful~(mostly to invalid characters)");}
