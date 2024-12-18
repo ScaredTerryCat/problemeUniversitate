@@ -1,0 +1,40 @@
+
+someone someoneAdam <marioetare1120@gmail.com>
+Fri, Dec 13, 2:34 AM (5 days ago)
+to me
+
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+
+public class HelloWorld
+{
+    public static int[] rotateLetf(int[] vector,int k,int len=-1){
+        if(len==-1){len=vector.Length;}
+        int[] result=new int[len];
+        for(int i=0;i<len;i++){
+            result[i]=vector[(i+k)%len];
+        }
+        return result;
+       
+    }
+    public static void afisareVector(int[] vector){
+        Console.WriteLine();
+        for(int i=0;i<vector.Length;i++){
+            Console.Write($"{vector[i]} ");
+        }
+        Console.WriteLine();
+    }
+    public static void Main(string[] args)
+    {
+        int[] vector=new int[10];
+        for(int i=0;i<10;i++){vector[i]=i+1;}
+        afisareVector(vector);
+        Console.Write("k=\t");
+        int k=Convert.ToInt32(Console.ReadLine());
+        int[] result= rotateLetf(vector,k);
+        afisareVector(result);
+       
+    }
+}
