@@ -4,11 +4,12 @@ public class Program
 {
 	public static void insertionSort(int[] vector){
 	for(int i=1;i<vector.Length;i++){
-	for(int j=i-1;j>=0;j--){
-	if(vector[j] >vector[i]){
-	(vector[i],vector[j])=(vector[j],vector[i]);
-	}
-	}
+	int j=i;
+		while(vector[j-1]>vector[j]){
+		(vector[j-1],vector[j])=(vector[j],vector[j-1]);
+		j-=1;
+		if(j==0){break;}
+		}
 	}
 	}
 	public static void Main()
