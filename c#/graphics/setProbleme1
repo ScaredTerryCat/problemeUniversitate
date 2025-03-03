@@ -1,0 +1,40 @@
+namespace MyGraphicsApp;
+using System;
+
+
+public partial class Form1 : Form
+{
+    public Form1()
+    {
+        InitializeComponent();
+        this.Paint+=new PaintEventHandler(Form1_Paint);
+     }
+     private void Form1_Paint(object? sender,PaintEventArgs e ){
+Graphics g=e.Graphics;
+Pen pen=new Pen(Color.Black,3);
+Random rnd=new Random();
+/*
+//problema1
+int nrPuncte=10;
+int[] x=new int[nrPuncte];
+int[] y=new int[nrPuncte];
+for(int i=0;i<nrPuncte;i++){
+    x[i]=rnd.Next(0,400);
+    y[i]=rnd.Next(0,400);
+}
+int minX=x[0],maxX=x[0],minY=y[0],maxY=y[0];
+for(int i=1;i<nrPuncte;i++){
+    if(x[i]<minX){minX=x[i];}
+    if(x[i]>maxX){maxX=x[i];}
+    if(y[i]>maxY){maxY=y[i];}
+    if(y[i]<minY){minY=y[i];}
+}
+g.DrawLine(pen,minX,minY,maxX,minY);
+g.DrawLine(pen,minX,maxY,maxX,maxY);
+g.DrawLine(pen,minX,minY,minX,maxY);
+g.DrawLine(pen,maxX,minY,maxX,maxY);
+*/
+//problema2
+
+}}
+
